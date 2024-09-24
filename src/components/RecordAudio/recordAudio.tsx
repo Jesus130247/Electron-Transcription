@@ -12,7 +12,7 @@ const RecordAudio = () => {
   const [recording, setRecording] = useState(false)
   const [summarized, setSummarized] = useState('Nothing has been summerized')
   const [showSummery, setShowSummery] = useState(false)
-  const [response, setResponse] = useState<string | null>(null);
+  const [_response, _setResponse] = useState<string | null>(null);
 
   useEffect(() => {
     console.log('start recording useEffect')

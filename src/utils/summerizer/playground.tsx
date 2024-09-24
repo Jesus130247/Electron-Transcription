@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const OpenAIComponent: React.FC = ({setSummarized, summarized, response, setResponse}) => {
+const OpenAIComponent: React.FC<{setSummarized: any, summarized: any, setResponse: any}> = ({setSummarized, summarized, setResponse}) => {
 
   const fetchOpenAIResponse = async () => {
     setSummarized(!summarized)

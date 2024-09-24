@@ -1,17 +1,17 @@
-import OpenAI from "openai";
+// import OpenAI from "openai";
 // dotenv.config();
 
 const openaiKey = import.meta.env.VITE_OPENAI_API_KEY
 
-const openai = new OpenAI({
-    organization: "org-PqmBk3NSxA2oruuligJ5z05Y",
-    project: "proj_aVnRR4IE5UzEBsakZNu1Xkfa",
-    apiKey: `${openaiKey}`,
-    dangerouslyAllowBrowser: true
-});
+// const openai = new OpenAI({
+//     organization: "org-PqmBk3NSxA2oruuligJ5z05Y",
+//     project: "proj_aVnRR4IE5UzEBsakZNu1Xkfa",
+//     apiKey: `${openaiKey}`,
+//     dangerouslyAllowBrowser: true
+// });
 
 
-export default async function SummeriseIt(transcript: String, setSummarized, setShowSummery) {
+export default async function SummeriseIt(transcript: String, setSummarized: any, setShowSummery: any) {
   try {
          const response = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',

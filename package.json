@@ -5,19 +5,23 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "deploy": "gh-pages -d build",
     "build": "tsc && vite build && electron-builder",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "pnpm run build"
   },
   "dependencies": {
     "@deepgram/sdk": "^3.5.1",
     "cross-fetch": "^4.0.0",
     "dotenv": "^16.4.5",
+    "gh-pages": "^6.1.1",
     "openai": "^4.56.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/node": "^22.6.1",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
